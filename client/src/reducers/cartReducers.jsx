@@ -5,7 +5,7 @@ export const CartReducer= (state={cartItems: []}, action)=>{
         if(alreadyExists){
             return{
                 ...state, 
-                carItems : state.cartItems.map(item=> item._id===action.payload._id ? action.payload : item)
+                cartItems : state.cartItems.map(item=> item._id===action.payload._id ? action.payload : item)
             }
         }else{
             return{

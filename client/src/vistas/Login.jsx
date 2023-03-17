@@ -11,7 +11,7 @@ export default function Login() {
     const dispatch = useDispatch()
 
     const registerstate = useSelector(state => state.loginUserReducer)
-    const { error, loading, success } = registerstate
+    const { error, loading } = registerstate
     useEffect(() => {
 
         if (localStorage.getItem('currentUser')) {
@@ -30,14 +30,14 @@ export default function Login() {
             <div className="row justify-content-center mt-5">
                 <div className="col-md-5 mt-5 text-left shadow-lg p-3 mb-5 bg-white rounded">
                     <h2 className="text-center m-2" style={{ fontSize: "35px" }}>
-                        Login
+                        Iniciar sesion
                     </h2>
 
                     {loading && (<Loading />)}
-                    {error && (<Error error='Invalid Credentials' />)}
+                    {error && (<Error error='Credenciales invalidas.' />)}
 
                     <div>
-                        <input required type="text" placeholder="email" className="form-control" value={email} onChange={(e) => { setemail(e.target.value) }} />
+                        <input required type="text" placeholder="juanperez@algo.com" className="form-control" value={email} onChange={(e) => { setemail(e.target.value) }} />
                         <input
                             type="text"
                             placeholder="password"
@@ -47,9 +47,9 @@ export default function Login() {
                             onChange={(e) => { setpassword(e.target.value) }}
                         />
 
-                        <button onClick={login} className="btn mt-3 mb-3">LOGIN</button>
+                        <button onClick={login} className="btn mt-3 mb-3">INICIA SESION</button>
                         <br />
-                        <a style={{ color: 'black' }} href="/register" className="mt-2">Click Here To Register</a>
+                        <a style={{ color: 'black' }} href="/register" className="mt-2">Click Aqui para registrarte</a>
                     </div>
                 </div>
             </div>

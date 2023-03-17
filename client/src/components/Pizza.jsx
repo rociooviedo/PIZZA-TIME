@@ -26,8 +26,8 @@ export default function Pizza({ pizza }) {
             </div>
             <div className="flex-container">
                 <div className="w-100 m-1">
-                    <p>Varients:</p>
-                    <select className="form-control" value={varient} onChange={(e) => { setVarient(e.target.value) }}>
+                    <p>Tamaño:</p>
+                    <select className="form-control" value={varient} onChange={(e) => { setVarient(e.target.value); }}>
                         {pizza.varients.map(varient => {
                             return <option value={varient}>{varient}</option>
                         })}
@@ -35,7 +35,7 @@ export default function Pizza({ pizza }) {
 
                 </div>
                 <div className="w-100 m-1">
-                    <p>Quantity:</p>
+                    <p>Cantidad:</p>
                     <select className="form-control" value={quantity} onChange={(e) => { setQuantity(e.target.value) }}>
                         {[...Array(10).keys()].map((x, y) => {
                             return <option value={y + 1}>{y + 1}</option>
@@ -45,10 +45,10 @@ export default function Pizza({ pizza }) {
             </div>
             <div className="flex-container">
                 <div className="m-1 w-100">
-                    <h1 className="mt-1">Price: {pizza.prices[0][varient] * quantity} RS/-</h1>
+                    <h1 className="mt-1">Precio: {pizza.prices[0][varient] * quantity} RS/-</h1>
                 </div>
                 <div className="m-1 w-100">
-                    <button className="btn" onClick={addtocart}>ADD TO CART</button>
+                    <button className="btn" onClick={addtocart}>AGREGAR</button>
                 </div>
             </div>
             <Modal show={show} onHide={handleClose}>
@@ -61,7 +61,7 @@ export default function Pizza({ pizza }) {
                     <p>{pizza.description}</p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <button className="btn" onClick={handleClose}>CLOSE</button>
+                    <button className="btn" onClick={handleClose}>CERRAR</button>
                 </Modal.Footer>
             </Modal>
         </div>

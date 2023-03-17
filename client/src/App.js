@@ -1,8 +1,9 @@
 import './App.css';
 import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap'
 import NavBar from './components/NavBar'
 import Home from './vistas/Home';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Cart from './vistas/Cart';
 import Login from './vistas/Login';
 import Register from './vistas/Register';

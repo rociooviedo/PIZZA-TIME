@@ -10,6 +10,7 @@ export default function NavBar() {
         <div>
             <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
                 <a className="navbar-brand" href="/"> PIZZA TIME</a>
+                
                 <button
                     className="navbar-toggler"
                     type="button"

@@ -37,11 +37,13 @@ export default function Register() {
 
                     <h2 className="text-center m-2" style={{ fontSize: '35px' }}>Registrate</h2>
                     <div>
-                        <input required type="text" placeholder="name" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
-                        <input required type="text" placeholder="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <input required type="text" placeholder="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
-                        <input required type="text" placeholder="confirm password" className="form-control" value={confirmPassword} onChange={(e) => setconfirmPassword(e.target.value)} />
-                        <button onClick={register} className='btn mt-3'>REGISTER</button>
+                        <input required type="text" placeholder="nombre" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+                        <input required type="text" placeholder="correo electronico" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input required type="text" placeholder="contrasenha" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <input required type="text" placeholder="confirmar contrasenha" className="form-control" value={confirmPassword} onChange={(e) => setconfirmPassword(e.target.value)} />
+                        <button onClick={register} className='btn mt-3'>REGISTRARSE</button>
+                        <br />
+                        <a style={{ color: 'black' }} href="/login" className="mt-2">Click aqui para Iniciar sesion</a>
                     </div>
                 </div>
             </div>
