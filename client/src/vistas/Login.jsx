@@ -4,14 +4,21 @@ import { loginUser } from "../actions/userAction";
 import Error from "../components/error";
 import Loading from "../components/loading";
 
+
 export default function Login() {
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const dispatch = useDispatch()
 
     const registerstate = useSelector(state => state.loginUserReducer)
-    const {error , loading , success} = registerstate
+    const { error, loading, success } = registerstate
+    useEffect(() => {
 
+        if (localStorage.getItem('currentUser')) {
+            window.location.href = '/'
+        }
+
+    }, [])
 
     function login() {
         const user = { email, password }

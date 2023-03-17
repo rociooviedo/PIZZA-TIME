@@ -13,10 +13,14 @@ const finalReducer = combineReducers({
     loginUserReducer:loginUserReducer,
 })
 const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
+const currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null
 
 const inicialState = {
     CartReducer : {
         cartItems: cartItems
+    },
+    loginUserReducer: {
+        currentUser: currentUser
     }
 }
 
