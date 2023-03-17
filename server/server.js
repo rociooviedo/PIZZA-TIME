@@ -7,8 +7,9 @@ const app = express();
 
 app.use(express.json());
 const pizzasRoute = require('./routes_controllers/pizza.routes')
-
-app.use('/api/pizzas', pizzasRoute)
+const userRoute = require('./routes_controllers/user.routes')
+app.use('/api/pizzas/', pizzasRoute)
+app.use('/api/users/', userRoute)
 app.get("/", (req, res)=>{
     res.send('Servidor trabajando' + port);
 });
