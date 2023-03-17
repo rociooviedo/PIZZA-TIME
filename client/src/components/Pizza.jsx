@@ -12,7 +12,7 @@ export default function Pizza({ pizza }) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const dispatch = useDispatch
+    const dispatch = useDispatch();
 
     function addtocart(){
         dispatch(addToCart(pizza, quantity, varient))

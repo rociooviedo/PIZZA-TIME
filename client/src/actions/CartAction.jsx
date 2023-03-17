@@ -1,4 +1,4 @@
-export const addToCart =(pizza, quantity, varient)=> (dispatch, getState)=>{
+export const addToCart = (pizza, quantity, varient) => (dispatch, getState)=>{
 
     var carItem = {
         name: pizza.name,
