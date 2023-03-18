@@ -18,11 +18,13 @@ export const addToCart = (pizza, quantity, varient) => (dispatch, getState)=>{
             dispatch({type:'DELETE_FROM_CART', payload:pizza})
         }
         else{
+            console.log('entre')
             dispatch({type:'ADD_TO_CART' , payload:cartItem})
         }
     }
 
     const cartItems = getState().CartReducer.cartItems
+    console.log(cartItems,'as')
     localStorage.setItem('cartItems', JSON.stringify(cartItems))
 }
 

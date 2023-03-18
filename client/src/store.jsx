@@ -3,13 +3,13 @@ import {legacy_createStore as createStore, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import {getAllPizzasReducer} from './reducers/pizzaReducers'
-import {CartReducer} from './reducers/cartReducers'
+import {cartReducer} from './reducers/cartReducers'
 import {registerUserReducer} from './reducers/userReducers'
 import {loginUserReducer} from './reducers/userReducers' 
 import { placeOrderReducer } from './reducers/orderReducer'
 const finalReducer = combineReducers({
     getAllPizzasReducer : getAllPizzasReducer,
-    CartReducer: CartReducer,
+    cartReducer: cartReducer,
     registerUserReducer: registerUserReducer,
     loginUserReducer:loginUserReducer,
     placeOrderReducer : placeOrderReducer,
